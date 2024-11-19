@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/foo"
+    android:orientation="vertical"
+    tools:context=".Login">
+
+    <TextView
+        android:id="@+id/counter_Pass"
+        android:layout_width="wrap_content"
+        android:layout_height="10sp"
+        android:layout_gravity="end"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/modern_antiqua"
+        android:text="0/25"
+        android:textColor="#505050"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:fontFamily="@font/modern_antiqua"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:shadowColor="#61353535"
+            android:shadowRadius="5"/>
+
+        <EditText
+            android:id="@+id/et5"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginLeft="60sp"
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="60sp"
+            android:background="@drawable/edittextstyle"
+            android:fontFamily="@font/montaga"
+            android:hint="Password"
+            android:inputType="text|textPassword"
+            android:maxLength="25"
+            android:text=""
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorHint="#5E5E5E"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/benter"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="40sp"
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="40sp"
+            android:background="@drawable/poloskab"
+            android:backgroundTint="#000000"
+            android:fontFamily="@font/montaga"
+            android:onClick="Enter"
+            android:text="Enter gallery"
+            android:textColor="#ECE4CD"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

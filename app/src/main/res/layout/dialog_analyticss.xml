@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewGraph"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <org.eazegraph.lib.charts.PieChart xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/piechart_n"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0">
+
+                        <View
+                            android:layout_width="25dp"
+                            android:layout_height="25sp"
+                            android:layout_marginLeft="5sp"
+                            android:background="@color/Java" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/modern_antiqua"
+                            android:gravity="left"
+                            android:paddingLeft="5sp"
+                            android:text="Current:"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvCurrent_n"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:fontFamily="cursive"
+                        android:gravity="center_horizontal"
+                        android:text="15"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0">
+
+                        <View
+                            android:layout_width="25dp"
+                            android:layout_height="25sp"
+                            android:layout_marginLeft="5sp"
+                            android:background="@color/CPP" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/modern_antiqua"
+                            android:paddingLeft="5sp"
+                            android:paddingTop="3sp"
+                            android:text="Total:"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvTotal_n"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:fontFamily="cursive"
+                        android:gravity="center_horizontal"
+                        android:text="150"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/end_analytics"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="70sp"
+            android:background="@drawable/poloskab"
+            android:backgroundTint="#000000"
+            android:fontFamily="@font/lemonada_light"
+            android:onClick="goTOGallery"
+            android:shadowColor="#FFFFFF"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:icon="@drawable/eee" />
+    </LinearLayout>
+
+</LinearLayout>

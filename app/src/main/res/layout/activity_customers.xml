@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mycanvas"
+    tools:context=".Customers">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/modern_antiqua"
+        android:text="Customers"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="4"
+        android:shadowRadius="1.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/ivsearchc"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_gravity="top"
+            android:onClick="SearchForCustomer"
+            android:paddingRight="5sp"
+            android:paddingBottom="5sp"
+            android:scaleX="1.7"
+            android:scaleY="1.7"
+            android:src="@drawable/sparkb" />
+
+        <EditText
+            android:id="@+id/etcustomer"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:fontFamily="@font/montaga"
+            android:hint="Search"
+            android:maxLength="25"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorHint="#754D4D"
+            android:textSize="18dp"
+            android:textStyle="italic|bold" />
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/ivsortc"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:onClick="sorter"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:src="@drawable/sortanim" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvcustomers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="40sp"
+        android:divider="@drawable/poloskaa"
+        android:dividerHeight="5sp"
+        android:listSelector="#51616161"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ListView>
+
+    <ImageView
+        android:id="@+id/iv_petno_cus"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="AddCustomer"
+        android:src="@drawable/petno"
+        app:tint="#553B0E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivaddcustomer"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="AddCustomer"
+        android:src="@drawable/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

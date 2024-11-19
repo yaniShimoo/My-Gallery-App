@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mycanvasb"
+    android:orientation="vertical"
+    tools:context=".Gallery">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35sp"
+        android:fontFamily="@font/modern_antiqua"
+        android:text="Gallery"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="4"
+        android:shadowRadius="1.6"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/ivSearchP"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:onClick="SearchForPainting"
+            android:paddingRight="5sp"
+            android:paddingBottom="5sp"
+            android:layout_gravity="top"
+            android:scaleX="1.7"
+            android:scaleY="1.7"
+            android:src="@drawable/sparkb" />
+
+        <EditText
+            android:id="@+id/etpaint"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:fontFamily="@font/montaga"
+            android:hint="Search"
+            android:maxLength="25"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorHint="#363845"
+            android:textSize="18dp"
+            android:textStyle="italic|bold" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/ivsort"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:onClick="ShowSort"
+            android:src="@drawable/sortanim" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llsortparameters"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/bysize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:fontFamily="@font/lemonada_light"
+            android:onClick="SortSize"
+            android:text="Size"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/byname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:fontFamily="@font/lemonada_light"
+            android:onClick="SortName"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bydate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:fontFamily="@font/lemonada_light"
+            android:onClick="SortDate"
+            android:text="Date"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bycost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:fontFamily="@font/lemonada_light"
+            android:onClick="SortCost"
+            android:text="Cost"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lvpictures"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="40sp"
+        android:divider="@drawable/poloskaa"
+        android:dividerHeight="5sp"
+        android:listSelector="#51616161"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ListView>
+
+    <ImageView
+        android:id="@+id/ivten"
+        android:layout_width="90dp"
+        app:tint="#BCC587"
+        android:layout_height="90sp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/petno"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivpaint"
+        android:layout_width="70dp"
+        android:layout_height="70sp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:onClick="AddPainting"
+        android:src="@drawable/paint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

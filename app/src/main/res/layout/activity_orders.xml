@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/orderscreene"
+    tools:context=".Orders">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/modern_antiqua"
+        android:text="Orders"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/info"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="Statistics"
+        android:src="@drawable/infoanim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="95dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/ivSearchOrd"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="SearchForOrder"
+            android:src="@drawable/sparkb"
+            android:scaleX="1.8"
+            android:scaleY="1.8"
+            android:paddingBottom="5sp"
+            android:paddingRight="5sp"/>
+
+        <EditText
+            android:id="@+id/et_search_order"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:hint="Search"
+            android:maxLength="30"
+            android:layout_marginLeft="3sp"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorHint="#6C4627"
+            android:textSize="18dp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/sortswitch"
+        android:visibility="gone"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="180dp"
+        android:onClick="onSwitchSorts"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_rawRes="@raw/button_switch" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/sortOrders"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="180dp"
+        android:onClick="onClickSort"
+        android:src="@drawable/sortanim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llsortord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/bydate_ord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lemonada_light"
+            android:onClick="SelectDate"
+            android:text="Date"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/byprice_ord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:fontFamily="@font/lemonada_light"
+            android:onClick="PriceSort"
+            android:text="Price"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bycomplete_ord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lemonada_light"
+            android:onClick="CompleteSort"
+            android:text="Complete"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvorders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40sp"
+        android:layout_marginTop="180dp"
+        android:divider="@drawable/poloskaa"
+        android:dividerHeight="5sp"
+        android:listSelector="#65A5A5A5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ListView>
+
+    <ImageView
+        android:id="@+id/ivaddorder"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="115dp"
+        android:onClick="AddOrder"
+        android:src="@drawable/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

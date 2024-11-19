@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewOrder"
+    android:background="@drawable/oformlenieb">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="25sp"
+        android:layout_marginVertical="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/modern_antiqua"
+            android:text="New Order"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/order_name"
+            android:onClick="SelectCustomers"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:fontFamily="@font/montaga"
+            android:hint="Customer`s name"
+            android:maxLength="30"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorHint="#5C5C5C"
+            android:textSize="18dp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/order_phone"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10sp"
+            android:layout_height="45sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:fontFamily="@font/montaga"
+            android:hint="Customer`s phone"
+            android:inputType="text"
+            android:maxLength="10"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorHint="#5C5C5C"
+            android:textSize="18dp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/order_namePaint"
+            android:onClick="SelectPainting"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10sp"
+            android:layout_height="45sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:fontFamily="@font/montaga"
+            android:hint="Painting name"
+            android:inputType="text"
+            android:maxLength="30"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorHint="#5C5C5C"
+            android:textSize="18dp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10sp"
+            android:orientation="horizontal">
+
+            <com.airbnb.lottie.LottieAnimationView
+                app:lottie_rawRes="@raw/button_switch"
+                android:onClick="onSwitch"
+                android:id="@+id/deliveryswitch"
+                android:layout_marginTop="5sp"
+                android:scaleX="1.8"
+                android:scaleY="1.8"
+                android:layout_width="60dp"
+                android:layout_height="32dp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/modern_antiqua"
+                android:text="Delivery club(+30₪)"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="5sp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/order_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montaga"
+                android:onClick="ChooseTime"
+                android:text="14:54"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/order_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:fontFamily="@font/montaga"
+                android:onClick="ChooseDate"
+                android:text="15/11/2023"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/order_price"
+                android:layout_width="115sp"
+                android:layout_height="35sp"
+                android:layout_marginStart="20sp"
+                android:fontFamily="@font/montaga"
+                android:hint="Total"
+                android:maxLength="8"
+                android:background="@drawable/edittextstyle"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textColorHint="#5C5C5C"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/order_adress"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:fontFamily="@font/montaga"
+            android:hint="Address"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorHint="#616161"
+            android:textSize="18dp"
+            android:textStyle="bold|italic" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/order_save"
+            android:onClick="SaveOrder"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40sp"
+            android:layout_marginRight="40sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/poloskab"
+            android:backgroundTint="#503222"
+            android:fontFamily="@font/modern_antiqua"
+            android:text="save"
+            android:textColor="#F8FCEB"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

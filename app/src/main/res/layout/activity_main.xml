@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/walld"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="cursive"
+            android:paddingBottom="25sp"
+            android:shadowColor="#000000"
+            android:shadowDx="10"
+            android:shadowDy="4"
+            android:shadowRadius="1.6"
+            android:text="My Gallery"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b1"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="40sp"
+            android:layout_marginRight="40sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/poloskab"
+            android:backgroundTint="#631515"
+            android:fontFamily="@font/modern_antiqua"
+            android:onClick="goToGallery"
+            android:pointerIcon="hand"
+            android:shadowColor="#000000"
+            android:shadowDx="12"
+            android:shadowDy="5"
+            android:shadowRadius="1.6"
+            android:text="Gallery"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b2"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="40sp"
+            android:layout_marginRight="40sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/poloskaa"
+            android:backgroundTint="#275329"
+            android:fontFamily="@font/modern_antiqua"
+            android:onClick="goToCustomers"
+            android:shadowColor="@color/black"
+            android:shadowDx="12"
+            android:shadowDy="5"
+            android:shadowRadius="1.6"
+            android:text="Customers"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b3"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="40sp"
+            android:layout_marginRight="40sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/poloskab"
+            android:backgroundTint="#172F57"
+            android:fontFamily="@font/modern_antiqua"
+            android:onClick="goToOrders"
+            android:shadowColor="@color/black"
+            android:shadowDx="12"
+            android:shadowDy="5"
+            android:shadowRadius="1.6"
+            android:text="Orders"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b4"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="40sp"
+            android:layout_marginRight="40sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/poloskaa"
+            android:backgroundTint="#3B1750"
+            android:fontFamily="@font/modern_antiqua"
+            android:onClick="goToSMS"
+            android:shadowColor="@color/black"
+            android:shadowDx="12"
+            android:shadowDy="5"
+            android:shadowRadius="1.6"
+            android:text="Massages"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b5"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="40sp"
+            android:layout_marginRight="40sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/poloskab"
+            android:backgroundTint="#655B1E"
+            android:fontFamily="@font/modern_antiqua"
+            android:onClick="goToSketches"
+            android:shadowColor="@color/black"
+            android:shadowDx="12"
+            android:shadowDy="5"
+            android:shadowRadius="1.6"
+            android:text="Sketches"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="530dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/modern_antiqua"
+            android:shadowColor="#000000"
+            android:shadowDx="8"
+            android:shadowDy="3"
+            android:shadowRadius="1.6"
+            android:text="Receive SMS"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/receiveSmsSwitch"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15sp"
+            android:onClick="onSwitchSmsReceiver"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:visibility="visible"
+            app:lottie_rawRes="@raw/button_switch" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="590dp"
+        android:fontFamily="@font/montaga"
+        android:shadowColor="#000000"
+        android:shadowDx="8"
+        android:shadowDy="3"
+        android:shadowRadius="1.6"
+        android:text="Music"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bgMusic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="573dp"
+        android:scaleX="1.35"
+        android:scaleY="1.35"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="560dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/musicSwitch"
+            android:layout_width="45dp"
+            android:layout_marginTop="20sp"
+            android:layout_height="45dp"
+            android:onClick="onSwitchMusic"
+            app:lottie_rawRes="@raw/checked_music" />
+    </LinearLayout>
+
+
+    <Switch
+        android:id="@+id/switch_receiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="600dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

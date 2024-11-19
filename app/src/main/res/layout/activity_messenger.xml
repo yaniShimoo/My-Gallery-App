@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mycanvasc"
+    tools:context=".Messenger">
+
+    <ImageView
+        android:id="@+id/infomessage"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="PopUpMenu"
+        android:src="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/menuAnim"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="50dp"
+        android:scaleY="0.8"
+        android:scaleX="0.8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_rawRes="@raw/imageview_settings" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/modern_antiqua"
+        android:text="SMS Messenger"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:shadowColor="#000000"
+        android:shadowDx="8"
+        android:shadowDy="4"
+        android:shadowRadius="1.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/SMSdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/montaga"
+        android:text="10/05/2006"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lvmessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36sp"
+        android:layout_marginBottom="35sp"
+        android:layout_marginTop="110dp"
+        android:divider="@drawable/poloskab"
+        android:dividerHeight="5sp"
+        android:listSelector="#51616161"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ListView>
+</androidx.constraintlayout.widget.ConstraintLayout>
